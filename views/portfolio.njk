@@ -14,85 +14,20 @@
     </div>
 
     <section class="cards">
-
-      <div class="card" id="MRQvG7Pq7dY">
+      {% for item in items %}
+      <div class="card" id="{{item.id}}">
         <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/MRQvG7Pq7dY/0.jpg" alt="Já ouviu falar do CSS focus-within?">
+          <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Image de {{item.title}}">
         </div>
         <div class="card__content">
-          <p>Já ouviu falar do CSS focus-within?</p>
+          <p>{{item.title}}</p>
         </div>
         <div class="card__info">
-          <p>4 min</p>
-          <p class="card__price">Free</p>
+          <p>{{item.duration}}</p>
+          <p class="card__price">{{item.price}}</p>
         </div>
       </div>
-
-      <div class="card" id="NpTF7HsuG5U">
-        <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/NpTF7HsuG5U/0.jpg" alt="Como fazer commits atômicos pelo VSCode">
-        </div>
-        <div class="card__content">
-          <p>Como fazer commits atômicos pelo VSCode</p>
-        </div>
-        <div class="card__info">
-          <p>6 min</p>
-          <p class="card__price">Free</p>
-        </div>
-      </div>
-
-      <div class="card" id="G1a0qYwQZ2Q">
-        <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/G1a0qYwQZ2Q/0.jpg" alt="COMO FAZER O DEPLOY DE UM PROJETO FRONT END (SUPER RÁPIDO!) (iniciantes)">
-        </div>
-        <div class="card__content">
-          <p>COMO FAZER O DEPLOY DE UM PROJETO FRONT END (SUPER RÁPIDO!) (iniciantes)</p>
-        </div>
-        <div class="card__info">
-          <p>2 min</p>
-          <p class="card__price">Free</p>
-        </div>
-      </div>
-
-      <div class="card" id="kJM5bFjmMXE">
-        <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/kJM5bFjmMXE/0.jpg" alt="Como lidar com as frustrações na carreira Dev?">
-        </div>
-        <div class="card__content">
-          <p>Como lidar com as frustrações na carreira Dev?</p>
-        </div>
-        <div class="card__info">
-          <p>19 min</p>
-          <p class="card__price">Free</p>
-        </div>
-      </div>
-
-      <div class="card" id="ruoHSuTKp-U">
-        <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/ruoHSuTKp-U/0.jpg" alt="Desestruturação no javascript com exemplos - Destructuring Assignment JS">
-        </div>
-        <div class="card__content">
-          <p>Desestruturação no javascript com exemplos - Destructuring Assignment JS</p>
-        </div>
-        <div class="card__info">
-          <p>16 min</p>
-          <p class="card__price">Free</p>
-        </div>
-      </div>
-
-      <div class="card" id="WYtFMrLeBo8">
-        <div class="card__image-container">
-          <img src="https://img.youtube.com/vi/WYtFMrLeBo8/0.jpg" alt="Técnica de estudo pra programar - Active Recall">
-        </div>
-        <div class="card__content">
-          <p>Técnica de estudo pra programar - Active Recall</p>
-        </div>
-        <div class="card__info">
-          <p>8 min</p>
-          <p class="card__price">Free</p>
-        </div>
-      </div>
-
+      {% endfor %}
     </section>
 
     <div class="modal-overlay">

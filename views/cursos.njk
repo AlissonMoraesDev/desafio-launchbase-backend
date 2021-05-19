@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  
+  <title>Cursos - Alisson Moraes</title>
+
+{% endblock %}
+
+{% block content %}
+    {% for curso in curso.modulo %}
+      <div id="wrapper">
+        <h1>{{ curso.name }}</h1>
+        <h2>{{ curso.time_estimed }}</h2>
+      </div>
+    {% endfor %}
+
+{% endblock %}

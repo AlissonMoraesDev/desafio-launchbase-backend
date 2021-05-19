@@ -9,16 +9,17 @@
 {% block content %}
    
     <div id="wrapper">
-      <img src="https://avatars.githubusercontent.com/u/7413619?v=4" alt="Alisson Moraes">
-      <h1>Alisson Moraes</h1>
-      <h2>Desenvolvedor Fullstack</h2>
-      <p>Criando soluções para os problemas do dia a dia nesse mundão.</p>
+      <img src="{{ about.avatar_url }}" alt="Imagem de {{ about.name }}">
+      <h1>{{ about.name }}</h1>
+      <h2>{{ about.role }}</h2>
+      <p>{{ about.description }}</p>
     </div>
 
     <div id="links-footer" class="links">
-      <a href="https://github.com/AlissonMoraesDev" target="_blank">Github</a>
-      <a href="https://www.instagram.com/alissonmoraesdev/" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/in/alissonmoraesdev/" target="_blank">LinkedIn</a>
+      {% for link in about.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+      {% endfor %}
+      
     </div>
 
   {% endblock %}
